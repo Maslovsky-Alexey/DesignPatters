@@ -41,6 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Modules\AbstractFactory\AbstractFactoryAppModule.cs" />
+    <Compile Include="Modules\AbstractFactory\Body\CreatorVasey.cs" />
+    <Compile Include="Modules\AbstractFactory\Body\Factories\Factory.cs" />
+    <Compile Include="Modules\AbstractFactory\Body\Factories\FactoryA.cs" />
+    <Compile Include="Modules\AbstractFactory\Body\Factories\FactoryB.cs" />
+    <Compile Include="Modules\AbstractFactory\Body\Models\Product.cs" />
+    <Compile Include="Modules\AbstractFactory\Body\Models\ProductA.cs" />
+    <Compile Include="Modules\AbstractFactory\Body\Models\ProductB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +56,7 @@
       <Name>DesignPatternsCSharp.BaseStructure</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
