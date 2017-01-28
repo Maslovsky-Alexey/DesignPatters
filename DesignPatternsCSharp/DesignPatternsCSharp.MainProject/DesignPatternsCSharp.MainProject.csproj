@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{008DFE8F-2D85-4068-8345-F3341B11F74C}</ProjectGuid>
+    <ProjectGuid>{26999554-1647-41E2-91E1-012397EF68B5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DesignPatternsCSharp</RootNamespace>
-    <AssemblyName>DesignPatternsCSharp</AssemblyName>
+    <RootNamespace>DesignPatternsCSharp.MainProject</RootNamespace>
+    <AssemblyName>DesignPatternsCSharp.MainProject</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppStart.cs" />
+    <Compile Include="Helpers\ObjectExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DesignPatternsCSharp.BaseStructure\DesignPatternsCSharp.BaseStructure.csproj">
+      <Project>{66b3e77d-3e22-4629-b553-689a0c3393f9}</Project>
+      <Name>DesignPatternsCSharp.BaseStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DesignPatternsCSharp.CreationalPatterns\DesignPatternsCSharp.CreationalPatterns.csproj">
+      <Project>{7a28cc06-446c-4bcb-bc75-ea167815adf7}</Project>
+      <Name>DesignPatternsCSharp.CreationalPatterns</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
