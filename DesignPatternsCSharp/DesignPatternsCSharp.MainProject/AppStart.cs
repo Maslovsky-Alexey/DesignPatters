@@ -6,6 +6,7 @@ using DesignPatternsCSharp.MainProject.Helpers;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using DesignPatternsCSharp.CreationalPatterns.Modules.AbstractFactory;
 
 namespace DesignPatternsCSharp.MainProject
@@ -26,7 +27,7 @@ namespace DesignPatternsCSharp.MainProject
         {
             var assemblies = AppDomain.CurrentDomain.GetAssemblies().Where(x => x.GetName().Name.EndsWith("Patterns"));
 
-            return 
+            return
                 assemblies
                     .SelectMany(x => x.GetTypes(), (assembly, type) => type)
                     .Where(x => x.IsPublic && x.IsClass && (typeof(IAppModule).IsAssignableFrom(x)) && x.Name.EndsWith("AppModule"));
@@ -56,14 +57,22 @@ namespace DesignPatternsCSharp.MainProject
                     int.TryParse(Console.ReadLine(), out number);
                 } while (number <= 0 || number > modules.Count());
 
-                var module = (IAppModule) Activator.CreateInstance(modules.ElementAt(number - 1));
+                var module = (IAppModule)Activator.CreateInstance(modules.ElementAt(number - 1));
                 Console.Clear();
 
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine(module.GetType().Name.Replace("AppModule", ""));
+                Console.WriteLine("----------------------------------------------------------------------");
                 Console.ForegroundColor = ConsoleColor.Gray;
 
                 module.Start();
+
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("----------------------------------------------------------------------");
+                Console.WriteLine("Press 'Enter' to back to menu");
+                Console.ForegroundColor = ConsoleColor.Gray;
+
+                Console.ReadLine();
             } while (true);
         }
     }
