@@ -14,8 +14,6 @@ namespace DesignPatternsCSharp.CreationalPatterns.Modules.AbstractFactory
 
             Console.WriteLine($"FactoryA - ({creatorVaseyA.CreateVasy()})");
             Console.WriteLine($"FactoryB - ({creatorVaseyB.CreateVasy()})");
-
-            Console.ReadLine();
         }
     }
 }
