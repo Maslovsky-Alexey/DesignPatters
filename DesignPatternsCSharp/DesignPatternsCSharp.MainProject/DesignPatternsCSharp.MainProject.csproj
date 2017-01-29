@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppStart.cs" />
+    <Compile Include="Helpers\AssemblyExtensions.cs" />
     <Compile Include="Helpers\ObjectExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
