@@ -51,6 +51,14 @@
     <Compile Include="Modules\Builder\Body\CarBuilder.cs" />
     <Compile Include="Modules\Builder\Body\Models\Car.cs" />
     <Compile Include="Modules\Builder\BuilderAppModule.cs" />
+    <Compile Include="Modules\FactoryMethod\Body\Family.cs" />
+    <Compile Include="Modules\FactoryMethod\Body\Models\Child.cs" />
+    <Compile Include="Modules\FactoryMethod\FactoryMethodAppModule.cs" />
+    <Compile Include="Modules\Prototype\Body\European.cs" />
+    <Compile Include="Modules\Prototype\Body\Man.cs" />
+    <Compile Include="Modules\Prototype\PrototypeAppModule.cs" />
+    <Compile Include="Modules\Singleton\Body\World.cs" />
+    <Compile Include="Modules\Singleton\SingletonAppModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

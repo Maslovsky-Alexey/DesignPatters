@@ -34,7 +34,8 @@ namespace DesignPatternsCSharp.MainProject
 
             for (var i = 0; i < modules.Count(); i++)
             {
-                result += $"{i + 1}. {modules.ElementAt(i).Name}\n";
+                var name = modules.ElementAt(i).Name;
+                result += $"{i + 1}. {name.Remove(name.Length - "ApModule".Length - 1)}\n";
             }
 
             return result;
@@ -56,7 +57,14 @@ namespace DesignPatternsCSharp.MainProject
                 {
                     Console.Write("Enter number of programm: ");
 
-                    int.TryParse(Console.ReadLine(), out number);
+                    var s = Console.ReadLine();
+
+                    if (!string.IsNullOrEmpty(s) && "exit".StartsWith(s))
+                    {
+                        return;
+                    }
+
+                    int.TryParse(s, out number);                 
                 } while (number <= 0 || number > modules.Count());
 
                 var module = (IAppModule)Activator.CreateInstance(modules.ElementAt(number - 1));
