@@ -48,6 +48,9 @@
     <Compile Include="Modules\AbstractFactory\Body\Models\Product.cs" />
     <Compile Include="Modules\AbstractFactory\Body\Models\ProductA.cs" />
     <Compile Include="Modules\AbstractFactory\Body\Models\ProductB.cs" />
+    <Compile Include="Modules\Builder\Body\CarBuilder.cs" />
+    <Compile Include="Modules\Builder\Body\Models\Car.cs" />
+    <Compile Include="Modules\Builder\BuilderAppModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
