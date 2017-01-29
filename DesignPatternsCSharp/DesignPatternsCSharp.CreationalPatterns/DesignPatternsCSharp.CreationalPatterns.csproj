@@ -57,6 +57,8 @@
     <Compile Include="Modules\Prototype\Body\European.cs" />
     <Compile Include="Modules\Prototype\Body\Man.cs" />
     <Compile Include="Modules\Prototype\PrototypeAppModule.cs" />
+    <Compile Include="Modules\Singleton\Body\World.cs" />
+    <Compile Include="Modules\Singleton\SingletonAppModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
