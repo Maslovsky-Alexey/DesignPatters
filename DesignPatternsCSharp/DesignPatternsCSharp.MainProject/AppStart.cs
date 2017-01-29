@@ -34,7 +34,8 @@ namespace DesignPatternsCSharp.MainProject
 
             for (var i = 0; i < modules.Count(); i++)
             {
-                result += $"{i + 1}. {modules.ElementAt(i).Name}\n";
+                var name = modules.ElementAt(i).Name;
+                result += $"{i + 1}. {name.Remove(name.Length - "ApModule".Length - 1)}\n";
             }
 
             return result;
