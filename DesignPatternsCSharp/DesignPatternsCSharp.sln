@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatternsCSharp.MainPr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatternsCSharp.BaseStructure", "DesignPatternsCSharp.BaseStructure\DesignPatternsCSharp.BaseStructure.csproj", "{66B3E77D-3E22-4629-B553-689A0C3393F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatternsCSharp.StructuralPatterns", "DesignPatternsCSharp.StructuralPatterns\DesignPatternsCSharp.StructuralPatterns.csproj", "{AFC2CDB4-0870-45AC-8537-94A4BFA9AD1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{66B3E77D-3E22-4629-B553-689A0C3393F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66B3E77D-3E22-4629-B553-689A0C3393F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66B3E77D-3E22-4629-B553-689A0C3393F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFC2CDB4-0870-45AC-8537-94A4BFA9AD1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFC2CDB4-0870-45AC-8537-94A4BFA9AD1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFC2CDB4-0870-45AC-8537-94A4BFA9AD1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFC2CDB4-0870-45AC-8537-94A4BFA9AD1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

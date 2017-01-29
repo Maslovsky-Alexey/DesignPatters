@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{26999554-1647-41E2-91E1-012397EF68B5}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{AFC2CDB4-0870-45AC-8537-94A4BFA9AD1F}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DesignPatternsCSharp.MainProject</RootNamespace>
-    <AssemblyName>DesignPatternsCSharp.MainProject</AssemblyName>
+    <RootNamespace>DesignPatternsCSharp.StructuralPatterns</RootNamespace>
+    <AssemblyName>DesignPatternsCSharp.StructuralPatterns</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,28 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppStart.cs" />
-    <Compile Include="Helpers\AssemblyExtensions.cs" />
-    <Compile Include="Helpers\ObjectExtensions.cs" />
+    <Compile Include="Modules\Adapter\AdapterAppModule.cs" />
+    <Compile Include="Modules\Adapter\Body\ConsoleAdapter.cs" />
+    <Compile Include="Modules\Adapter\Body\FileAdapter.cs" />
+    <Compile Include="Modules\Adapter\Body\Interfaces\Loger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DesignPatternsCSharp.BaseStructure\DesignPatternsCSharp.BaseStructure.csproj">
       <Project>{66b3e77d-3e22-4629-b553-689a0c3393f9}</Project>
       <Name>DesignPatternsCSharp.BaseStructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DesignPatternsCSharp.CreationalPatterns\DesignPatternsCSharp.CreationalPatterns.csproj">
-      <Project>{7a28cc06-446c-4bcb-bc75-ea167815adf7}</Project>
-      <Name>DesignPatternsCSharp.CreationalPatterns</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DesignPatternsCSharp.StructuralPatterns\DesignPatternsCSharp.StructuralPatterns.csproj">
-      <Project>{afc2cdb4-0870-45ac-8537-94a4bfa9ad1f}</Project>
-      <Name>DesignPatternsCSharp.StructuralPatterns</Name>
-    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
