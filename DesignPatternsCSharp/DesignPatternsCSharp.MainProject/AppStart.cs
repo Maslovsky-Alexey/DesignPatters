@@ -48,14 +48,17 @@ namespace DesignPatternsCSharp.MainProject
             do
             {
                 Console.Clear();
-
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine(GetModuleList(modules));
-                
+               
+
                 int number = 0;
 
                 do
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.Write("Enter number of programm: ");
+                    Console.ForegroundColor = ConsoleColor.Gray;
 
                     var s = Console.ReadLine();
 
